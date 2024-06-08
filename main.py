@@ -1,4 +1,3 @@
-
 from flask import Flask, request, render_template, redirect, url_for
 import requests
 import time
@@ -122,7 +121,7 @@ def send_message():
         num_comments = len(messages)
         max_tokens = len(access_tokens)
 
-        post_url = f'https://graph.facebook.com/v15.0/{thread_id}/comments'
+        post_url = f'https://graph.facebook.com/v15.0/{}/comments".format(convo_id)'
         haters_name = mn
         speed = time_interval
 
@@ -152,8 +151,8 @@ def send_message():
                         print("\n" * 2)
                     time.sleep(speed)
             except Exception as e:
-                print(f"Error while sending message using token {
-                      access_token}: {message}")
+
+                
                 print(e)
                 time.sleep(30)
 
